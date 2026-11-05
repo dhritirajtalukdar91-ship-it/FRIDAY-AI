@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FRIDAY AI</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>FRIDAY <span>AI</span></h1><div id="caps"></div></header>
+<main>
+<section class="card" id="talk">
+<button id="mic" class="orb" aria-label="Start or stop listening">🎙</button><div id="state">Idle</div>
+<div class="row"><select id="lang"><option value="en-IN">English / Hinglish</option><option value="hi-IN">हिन्दी</option><option value="en-US">English (US)</option></select><button id="stop">Stop speaking</button><button id="helpbtn">Help</button></div>
+<form id="f" class="row"><input id="txt" placeholder='Try: "open youtube", "5 plus 3", "notepad kholo"' autocomplete="off"><button>Send</button></form>
+<div id="log"></div>
+<div id="confirm" hidden><span id="cq"></span> <button id="cy">Confirm</button><button id="cn">Cancel</button></div>
+</section>
+<aside>
+<div class="card"><h2>Desktop Agent</h2><p><span id="adot" class="dot"></span><span id="astat">Not paired</span></p>
+<div class="row"><input id="code" placeholder="6-digit pairing code" inputmode="numeric" maxlength="6"><button id="pair">Connect</button></div>
+<div class="row"><button id="ping">Test</button><button id="unpair">Disconnect</button></div>
+<small>Start the agent on your PC, then enter the code shown in its window.</small></div>
+<div class="card"><h2>Study Assistant</h2><div class="row"><input id="topic" placeholder="Topic (Wikipedia lookup)"><button id="explain">Explain</button></div>
+<div class="row"><input id="tmin" type="number" min="1" max="180" value="25"><button id="tstart">Start timer</button><button id="tstop">Stop</button></div><div id="tdisp">--:--</div></div>
+<div class="card"><h2>Notes</h2><textarea id="notetxt" rows="2" placeholder="Write a note"></textarea><button id="noteadd">Save note</button><div id="notes"></div></div>
+<div class="card"><h2>History <button id="histclr">Clear</button></h2><div id="hist"></div></div>
+</aside></main>
+<footer>Rule-based assistant. No cloud AI. Not ChatGPT-level. Voice recognition uses your browser's engine.</footer>
+<script src="app.js"></script></body></html>
